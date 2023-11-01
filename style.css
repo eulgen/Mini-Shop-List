@@ -1,0 +1,75 @@
+body {
+	margin: 0;
+	padding: 0;
+  color: white;
+}
+
+.frame {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.menu {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(11, 93, 104);
+}
+
+ul {
+  width: 70%;
+  height: 100%;
+	line-height: 6vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.done {
+	width: 100%;
+	margin-top: 1vh;
+  margin-bottom: 1vh;
+	border-width: 1px;
+  list-style: none;
+	display: flex;
+  flex-wrap: row wrap;
+	justify-content: space-between;
+	padding-left: 1em;
+  margin-right: 3em
+}
+
+.done:hover {
+	border-style: groove;
+	border-radius: 50px;
+	cursor: pointer;
+  background-color: rgb(206, 185, 185);
+  border-color: rgb(206, 185, 185);
+}
+
+button {
+	border-radius: 10px;
+	background-color: rgb(195, 0, 255);
+	border-style: none;
+  color: white;
+  cursor: pointer;
+}
+
+.click {
+	margin-top: 1em;
+  color: white;
+  background-color: red;
+}
+
+.list{
+  margin-right: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.form{
+  margin-right: 0.5em;
+}

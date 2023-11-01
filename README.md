@@ -1,4 +1,4 @@
-# PROJECT MINI SHOP LIST 👋
+# PROJECT MINI SHOP  👋
 
 Ce document explique le but et l'objectif du projet, ainsi que les points clés à retenir pour comprendre le code.
 
@@ -6,7 +6,7 @@ Ce document explique le but et l'objectif du projet, ainsi que les points clés 
 
 ## Sommaire
 
-- [PROJECT MINI SHOP LIST 👋](#project-mini-shop-list-)
+- [PROJECT MINI SHOP  👋](#project-mini-shop--)
   - [Sommaire](#sommaire)
     - [Introduction](#introduction)
     - [Explication du Code](#explication-du-code)

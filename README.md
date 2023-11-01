@@ -1,4 +1,4 @@
-# PROJECT 👋
+# PROJECT MINI SHOP LIST 👋
 
 Ce document explique le but et l'objectif du projet, ainsi que les points clés à retenir pour comprendre le code.
 
@@ -6,10 +6,18 @@ Ce document explique le but et l'objectif du projet, ainsi que les points clés 
 
 ## Sommaire
 
+- [PROJECT MINI SHOP LIST 👋](#project-mini-shop-list-)
+  - [Sommaire](#sommaire)
+    - [Introduction](#introduction)
+    - [Explication du Code](#explication-du-code)
+    - [En Résumé](#en-résumé)
 
+### Introduction
 
+  Le But de ce projet est de _mettre en place_ une _Shop List_. En fait une _Shop List_ c'est un peu comme _ToDo List_. Alors une **ToDo List**:est un procédé qui se veut simple et efficace pour gérer les tâches d'un projet.
+  Pour la réalisation du projet nous avons utilisé le _html_,_css_ et le _javascript_.
 
-Pour la réalisation du projet nous avons utilisé le html,css et le javascript.
+### Explication du Code
 
 - #### Au Niveau du HTML
 
@@ -64,6 +72,8 @@ Pour la réalisation du projet nous avons utilisé le html,css et le javascript.
   
   - Il y a en plus une autre instruction plutot intéressante : `appendChild` qui permet d'ajouter une balise par exemple une `div` à une autre balise en tant qu'enfant.
 
-- #### En Résumé
+### En Résumé
 
-  Le but de ce projet était de mettre sur pied une _Shop List_. C'est ce qui a été fait 
+  Le but de ce projet était de mettre sur pied une _Shop List_. C'est ce qui a été fait et j'ai beaucoup appris au niveau du _html_,_css_ et _javascript_ 😊.[^1]
+
+[^1]: By EulGen

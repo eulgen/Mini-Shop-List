@@ -17,6 +17,8 @@ Ce document explique le but et l'objectif du projet, ainsi que les points clés 
   Le But de ce projet est de _mettre en place_ une _Shop List_. En fait une _Shop List_ c'est un peu comme _ToDo List_. Alors une **ToDo List**:est un procédé qui se veut simple et efficace pour gérer les tâches d'un projet.
   Pour la réalisation du projet nous avons utilisé le _html_,_css_ et le _javascript_.
 
+  ![Shop List](shoplist.webp)
+
 ### Explication du Code
 
 - #### Au Niveau du HTML

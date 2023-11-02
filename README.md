@@ -1,4 +1,4 @@
-# PROJECT MINI SHOP  👋
+# PROJECT MINI SHOP 👋
 
 Ce document explique le but et l'objectif du projet, ainsi que les points clés à retenir pour comprendre le code.
 
@@ -6,7 +6,7 @@ Ce document explique le but et l'objectif du projet, ainsi que les points clés 
 
 ## Sommaire
 
-- [PROJECT MINI SHOP  👋](#project-mini-shop--)
+- [PROJECT MINI SHOP 👋](#project-mini-shop-)
   - [Sommaire](#sommaire)
     - [Introduction](#introduction)
     - [Explication du Code](#explication-du-code)
@@ -14,10 +14,10 @@ Ce document explique le but et l'objectif du projet, ainsi que les points clés 
 
 ### Introduction
 
-  Le But de ce projet est de _mettre en place_ une _Shop List_. En fait une _Shop List_ c'est un peu comme _ToDo List_. Alors une **ToDo List**:est un procédé qui se veut simple et efficace pour gérer les tâches d'un projet.
-  Pour la réalisation du projet nous avons utilisé le _html_,_css_ et le _javascript_.
+Le But de ce projet est de _mettre en place_ une _Shop List_. En fait une _Shop List_ c'est un peu comme _ToDo List_. Alors une **ToDo List**:est un procédé qui se veut simple et efficace pour gérer les tâches d'un projet.
+Pour la réalisation du projet nous avons utilisé le _html_,_css_ et le _javascript_.
 
-  ![Shop List](shoplist.webp)
+![Shop List](shoplist.webp)
 
 ### Explication du Code
 
@@ -45,37 +45,55 @@ Ce document explique le but et l'objectif du projet, ainsi que les points clés 
 - #### Au Niveau du JAVASCRIPT
 
   Le Javascript est principalement utilisé pour interagir avec l'interface graphique. D'ailleur c'est la base 😒.
-  La dessus, il y a plusieurs fonctions qui ont été mis en place pour réaliser notre projet.
+  La dessus, il y a une fonction qui a été mis en place et dont je suis particulièrement fière.
 
-  ``` javascript
-  for (var i = 0; i < list.length; i++) {
-    /**
-    * Handles the click event for each item in the list.
-    *
-    * @param {Event} ev - The click event.
-    * @return {void}
-    */
+  ```javascript
+    function state_delete_Items() {
+     var list = document.querySelectorAll(".state");
+     var deleteItem = document.querySelectorAll(".delete");
 
-    list[i].onclick = function (ev) {
-      if (ev.target.textContent == "on") {
+     for (let j = 0; j < deleteItem.length; j++) {
+      // Attach a click event listener to each deleteItem element
+      deleteItem[j].onclick = function (ev) {
+     // Remove the parent node of the parent node of the clicked element
+     ev.target.parentNode.parentNode.remove();
+      };
+     }
+
+     for (var i = 0; i < list.length; i++) {
+      /**
+      * Handles the click event for each item in the list.
+      *
+      * @param {Event} ev - The click event.
+      * @return {void}
+      */
+      list[i].onclick = function (ev) {
+       if (ev.target.textContent == "on") {
         ev.target.style.backgroundColor = "#000000";
         ev.target.textContent = "off";
-      } else {
+       } else {
         ev.target.textContent = "on";
         ev.target.style.backgroundColor = "#C300FF";
-      }
-    };
-  }
+       }
+      };
+     }
+    }
   ```
 
-  - Dans cet extrait de code il ya l'instruction `onclick` qui permet de lier chaque élement de la _Shop list_ à un événement via le button _on/off_.
+La fonction permet principalement de gérer l'état des boutons ainsi que la suppression des élements de la liste.
 
-  - `ev` aussi represente l'évenement. Ce que j'ai trouvé cool là dessus c'est le fait qu'on puisse agir sur le css dessus.
-  
-  - Il y a en plus une autre instruction plutot intéressante : `appendChild` qui permet d'ajouter une balise par exemple une `div` à une autre balise en tant qu'enfant.
+Dans le code _JavaScript_, il y a certaines fonctions qui m'ont paru plutot cool.
+
+- Il ya l'instruction `onclick` qui permet de lier chaque élement de la _Shop list_ à un événement via le button _on/off_.
+
+- `ev` aussi represente l'évenement. Ce que j'ai trouvé cool là dessus c'est le fait qu'on puisse agir sur le css dessus.
+
+- Il y a en plus une autre instruction plutot intéressante : `appendChild` qui permet d'ajouter une balise par exemple une `div` à une autre balise en tant qu'enfant.
+
+- La fonction `remove` n'est pas mal non plus. C'est elle qui me permet de supprimer les élements de la _ShopList_.
 
 ### En Résumé
 
-  Le but de ce projet était de mettre sur pied une _Shop List_. C'est ce qui a été fait et j'ai beaucoup appris au niveau du _html_,_css_ et _javascript_ 😊.[^1]
+Le but de ce projet était de mettre sur pied une _Shop List_. C'est ce qui a été fait et j'ai beaucoup appris au niveau du _html_,_css_ et _javascript_ 😊.[^1]
 
 [^1]: By EulGen

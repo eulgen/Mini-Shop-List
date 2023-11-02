@@ -37,7 +37,7 @@ click.addEventListener("click", function () {
 	stateItem.className = "state form";
 	stateItem.textContent = "on";
 	var deleteItem = document.createElement("button");
-	deleteItem.className = "form";
+	deleteItem.className = "delete form";
 	deleteItem.textContent = "delete";
 	list.appendChild(stateItem);
 	list.appendChild(deleteItem);
@@ -45,14 +45,31 @@ click.addEventListener("click", function () {
 	new_li.appendChild(list);
 	document.querySelector("ul").appendChild(new_li);
 
-	var new_list = document.getElementsByClassName("state");
+	state_delete_Items();
+});
 
-	for (var i = 0; i < new_list.length; i++) {
-		console.log("length : " + new_list.length + "\n");
-		/* The code `new_list[i].onclick = function (ev) { ... }` is assigning a click event handler to each
-		element in the `new_list` array. */
-		new_list[i].onclick = function (ev) {
-			console.log("indx : " + i + "\n");
+state_delete_Items();
+
+function state_delete_Items() {
+	var list = document.querySelectorAll(".state");
+	var deleteItem = document.querySelectorAll(".delete");
+
+	for (let j = 0; j < deleteItem.length; j++) {
+		// Attach a click event listener to each deleteItem element
+		deleteItem[j].onclick = function (ev) {
+			// Remove the parent node of the parent node of the clicked element
+			ev.target.parentNode.parentNode.remove();
+		};
+	}
+
+	for (var i = 0; i < list.length; i++) {
+		/**
+		 * Handles the click event for each item in the list.
+		 *
+		 * @param {Event} ev - The click event.
+		 * @return {void}
+		 */
+		list[i].onclick = function (ev) {
 			if (ev.target.textContent == "on") {
 				ev.target.style.backgroundColor = "#000000";
 				ev.target.textContent = "off";
@@ -62,24 +79,4 @@ click.addEventListener("click", function () {
 			}
 		};
 	}
-});
-
-var list = document.getElementsByClassName("state");
-
-for (var i = 0; i < list.length; i++) {
-	/**
-	 * Handles the click event for each item in the list.
-	 *
-	 * @param {Event} ev - The click event.
-	 * @return {void}
-	 */
-	list[i].onclick = function (ev) {
-		if (ev.target.textContent == "on") {
-			ev.target.style.backgroundColor = "#000000";
-			ev.target.textContent = "off";
-		} else {
-			ev.target.textContent = "on";
-			ev.target.style.backgroundColor = "#C300FF";
-		}
-	};
 }
